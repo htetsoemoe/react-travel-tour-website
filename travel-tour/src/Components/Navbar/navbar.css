@@ -44,13 +44,13 @@
     height: max-content;
     width: 80%;
     border-radius: 1rem;
-    top: 6rem;
+    top: -500rem; /* when screen reaching 760 and less than navbar will disappear*/
     left: 50%;
     padding: 1rem;
     transform: translate(-50%);
     z-index: 2000;
     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-    transition: 0.3s ease-in-out;
+    transition: 1.2s ease-in-out;
   }
   .header .navBar .navLists {
     flex-direction: column;
@@ -87,6 +87,9 @@
   .header .navBar .closeNavbar:hover {
     color: var(--SecondaryColor);
     cursor: pointer;
+  }
+  .header .activeNavBar {
+    top: 7rem;
   }
 }
 .header .toggleNavbar .icon {

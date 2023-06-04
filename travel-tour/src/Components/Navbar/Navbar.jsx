@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navbar.css'
 import { MdOutlineTravelExplore } from 'react-icons/md'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { TbGridDots } from 'react-icons/tb'
 
 const Navbar = () => {
+  const [active, setActive] = useState("navBar") // max-width: 760px navBar will disappear
+
+  // Function for toggle navBar
+  const showNavMenuHandler = () => {
+    setActive("navBar activeNavBar")
+  }
+
+  // Function for close navbar menu
+  const hideNavMenuHandler = () => {
+    setActive("navBar")
+  }
+
   return (
     <section className="navBarSection">
       <header className="header flex">
-        
+
         <div className="logoDiv">
           <a href="#" className='logo flex'>
-            <h1><MdOutlineTravelExplore className='icon'/> T&H Travel.</h1>
+            <h1><MdOutlineTravelExplore className='icon' /> T&H Travel.</h1>
           </a>
         </div>
 
-        <div className="navBar">
+        <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
               <a href="#" className="navLink">Home</a>
@@ -50,13 +62,13 @@ const Navbar = () => {
             </button>
           </ul>
 
-          <div className="closeNavbar">
-            <AiFillCloseCircle className="icon"/>
+          <div onClick={hideNavMenuHandler} className="closeNavbar">
+            <AiFillCloseCircle className="icon" />
           </div>
         </div>
 
-        <div className="toggleNavbar">
-          <TbGridDots className='icon'/>
+        <div onClick={showNavMenuHandler} className="toggleNavbar">
+          <TbGridDots className='icon' />
         </div>
 
       </header>
