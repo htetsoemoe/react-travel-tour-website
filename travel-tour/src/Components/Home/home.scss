@@ -58,7 +58,7 @@
         z-index: 100; // In default .homeContent is under the video
 
         .textDiv {
-            padding: 4rem 0;
+            padding: 1rem 0;
 
             .smallText {
                 font-size: 13px;
@@ -73,5 +73,113 @@
                 color: #04ebe9;
             }
         }
+
+        .cardDiv {  // styles for create card 
+            position: relative;
+            padding: 2rem 1rem;
+            background: var(--whiteColor);
+            border-radius: 10px;
+            gap: 1rem;
+
+            label {
+                display: block;
+                color: var(--textColor);
+                padding-bottom: 10px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            // label_total in div.priceInput
+            .label_total {
+                justify-content: space-between;
+                align-items: center;
+
+                .total {
+                    color: var(--textColor);
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            // div.input (group of input element and icons)
+            .input {
+                height: 40px;
+                padding: 0 1rem;
+                background: var(--inputColor);
+                border-radius: 3rem;
+
+                input {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 500;
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .icon {
+                    font-size: 18px;
+                    color: var(--PrimaryColor);
+                    margin-left: 10px;
+                }
+
+                .input[type=range] {
+                    background: blue;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            // styles for filter button
+            .searchOption {
+                position: absolute;
+                background: var(--gradientColor);
+                width: max-content;
+                bottom: -1rem;
+                column-gap: 0.8rem;
+                padding: 5px 1rem;
+                border-radius: 3rem;
+                left: 50%;
+                transform: translate(-50%);
+                justify-content: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: var(--PrimaryColor);
+                }
+                
+                .icon {
+                    font-size: 18px;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .homeFooterIcons {
+            width: 100%;
+            justify-content: space-between;
+
+            .icon {
+                font-size: 25px;
+                margin: 0 5px;
+                color: var(--whiteColor);
+                font-weight: 600;
+                cursor: pointer;
+                &:hover {
+                    color: var(--PrimaryColor);
+                }
+            }
+        }
+
     }
 }
+
+// MEDIA QUERIES 

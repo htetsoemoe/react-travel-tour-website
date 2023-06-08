@@ -55,7 +55,7 @@
   z-index: 100;
 }
 .home .homeContent .textDiv {
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 .home .homeContent .textDiv .smallText {
   font-size: 13px;
@@ -67,4 +67,97 @@
   position: relative;
   font-size: 1.8rem;
   color: #04ebe9;
+}
+.home .homeContent .cardDiv {
+  position: relative;
+  padding: 2rem 1rem;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.home .homeContent .cardDiv label {
+  display: block;
+  color: var(--textColor);
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.home .homeContent .cardDiv .label_total {
+  justify-content: space-between;
+  align-items: center;
+}
+.home .homeContent .cardDiv .label_total .total {
+  color: var(--textColor);
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.home .homeContent .cardDiv .input {
+  height: 40px;
+  padding: 0 1rem;
+  background: var(--inputColor);
+  border-radius: 3rem;
+}
+.home .homeContent .cardDiv .input input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+.home .homeContent .cardDiv .input input::-moz-placeholder {
+  font-size: 14px;
+}
+.home .homeContent .cardDiv .input input::placeholder {
+  font-size: 14px;
+}
+.home .homeContent .cardDiv .input input:hover {
+  cursor: pointer;
+}
+.home .homeContent .cardDiv .input .icon {
+  font-size: 18px;
+  color: var(--PrimaryColor);
+  margin-left: 10px;
+}
+.home .homeContent .cardDiv .input .input[type=range] {
+  background: blue;
+  margin-bottom: 5rem;
+}
+.home .homeContent .cardDiv .searchOption {
+  position: absolute;
+  background: var(--gradientColor);
+  width: -moz-max-content;
+  width: max-content;
+  bottom: -1rem;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  padding: 5px 1rem;
+  border-radius: 3rem;
+  left: 50%;
+  transform: translate(-50%);
+  justify-content: center;
+  cursor: pointer;
+}
+.home .homeContent .cardDiv .searchOption:hover {
+  background: var(--PrimaryColor);
+}
+.home .homeContent .cardDiv .searchOption .icon {
+  font-size: 18px;
+}
+.home .homeContent .cardDiv .searchOption span {
+  font-size: 13px;
+}
+.home .homeContent .homeFooterIcons {
+  width: 100%;
+  justify-content: space-between;
+}
+.home .homeContent .homeFooterIcons .icon {
+  font-size: 25px;
+  margin: 0 5px;
+  color: var(--whiteColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+.home .homeContent .homeFooterIcons .icon:hover {
+  color: var(--PrimaryColor);
 }/*# sourceMappingURL=home.css.map */
