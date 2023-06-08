@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
 import video from '../../assets/video1.mp4'
 import { GrLocation } from 'react-icons/gr'
@@ -8,8 +8,12 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { FaTripadvisor } from 'react-icons/fa'
 import { BsListTask } from 'react-icons/bs'
 import { TbApps } from 'react-icons/tb'
+import { Slider, Text, Box } from '@mantine/core';
 
 const Home = () => {
+  // state for input slider
+  const [price, setPrice] = useState(500)
+
   return (
     <section className="home">
       <div className="overlay"></div>
@@ -46,10 +50,14 @@ const Home = () => {
           <div className="priceInput">
             <div className="label_total flex">
               <label htmlFor="price">Max price:</label>
-              <div className="total">$5000</div>
+              <div className="total">
+                <Text size="lg">
+                  $ {price}
+                </Text>   
+              </div>
             </div>
             <div className="flex input">
-              <input type="range" max="5000" min="1000" name="" id="" />
+              <input onChange={(event) => setPrice(event.target.value)} type="range" max="5000" min="1000" name="" id="" />
             </div>
           </div>
 
@@ -69,7 +77,7 @@ const Home = () => {
 
           <div className="leftIcons">
             <BsListTask className="icon" />
-            <TbApps className="icon"/>
+            <TbApps className="icon" />
           </div>
         </div>
       </div>
