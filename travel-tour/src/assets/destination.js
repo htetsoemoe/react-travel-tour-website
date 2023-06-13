@@ -5,7 +5,7 @@ const data = [
         destTitle: 'Bora Bora',
         location: 'New Zealand',
         grade: 'CULTURAL RELAX',
-        fees: '$700',
+        fees: '$3000',
         description: 'The island of Bora Bora is a honeymooner’s paradise. The ultimate setting for romance is largely mainly due to the iconic beauty of Mount Otemanu,which rises from the sea like an emerald jewel, encircled by gorgeous coral reefs and several white sand islets called motus.'
     },
     {
