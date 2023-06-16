@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './footer.css'
 import video2 from '../../assets/video2.mp4'
 import { FiSend } from 'react-icons/fi'
@@ -9,10 +9,19 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { FaTripadvisor } from 'react-icons/fa'
 import { FaChevronRight } from 'react-icons/fa'
 
+// Using AOS library
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 // This variable used in footer section
 const thisYear = new Date().getFullYear()
 
 const Footer = () => {
+  // add animation on scroll using useEffect hook
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
   return (
     <section className="footer">
       <div className="videoDiv">
@@ -21,14 +30,14 @@ const Footer = () => {
 
       <div className="secContent container">
         <div className="contactDiv flex">
-          <div className="text">
+          <div data-aos="fade-up" className="text">
             <small>KEEP IN TOUCH</small>
             <h2>Travel with us</h2>
           </div>
 
           <div className="inputDiv flex">
-            <input type="text" placeholder='Enter email address' />
-            <button className="btn flex" type='submit'>
+            <input data-aos="fade-up" type="text" placeholder='Enter email address' />
+            <button data-aos="fade-up" className="btn flex" type='submit'>
               <FiSend className="icon" />
             </button>
           </div>
@@ -43,11 +52,11 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="footerParagraph">
+            <div data-aos="fade-up" className="footerParagraph">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, amet. Placeat facere doloremque neque tempore pariatur atque quas fuga accusantium?
             </div>
 
-            <div className="footerSocials flex">
+            <div data-aos="fade-up" className="footerSocials flex">
               <AiOutlineTwitter className='icon' />
               <AiFillYoutube className='icon' />
               <AiFillInstagram className='icon' />
@@ -57,7 +66,9 @@ const Footer = () => {
 
           <div className="footerLinks grid">
             {/* Group One */}
-            <div className="linkGroup">
+            <div data-aos="fade-up"
+              data-aos-duration="3000"
+              className="linkGroup">
               <span className="groupTitle">
                 OUR AGENCY
               </span>
@@ -65,7 +76,7 @@ const Footer = () => {
               <ol>
                 <li className="footerList flex">
                   <FaChevronRight className='iconFont' />
-                  <a href="#">Services</a>                  
+                  <a href="#">Services</a>
                 </li>
 
                 <li className="footerList flex">
@@ -91,7 +102,9 @@ const Footer = () => {
             </div>
 
             {/* Group Two */}
-            <div className="linkGroup">
+            <div data-aos="fade-up"
+              data-aos-duration="3000"
+              className="linkGroup">
               <span className="groupTitle">
                 PARTNER
               </span>
@@ -125,7 +138,9 @@ const Footer = () => {
             </div>
 
             {/* Group Three */}
-            <div className="linkGroup">
+            <div data-aos="fade-up"
+              data-aos-duration="5000"
+              className="linkGroup">
               <span className="groupTitle">
                 LAST MINUTE
               </span>
@@ -161,7 +176,7 @@ const Footer = () => {
 
           <div className="footerDiv flex">
             <small>T&H Travel Agency</small>
-            <small>Copyrights Reserved - {thisYear}</small>
+            <small>Copyrights Reserved &copy; {thisYear}</small>
           </div>
         </div>
       </div>

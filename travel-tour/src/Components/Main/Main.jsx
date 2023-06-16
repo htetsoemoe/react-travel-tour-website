@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './main.css'
 import { HiLocationMarker } from 'react-icons/hi'
 import { HiOutlineClipboardCheck } from 'react-icons/hi'
@@ -6,11 +6,20 @@ import { HiOutlineClipboardCheck } from 'react-icons/hi'
 // import JSON from assets/destination.js
 import destinations from '../../assets/destination'
 
+// Using AOS library
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 const Main = () => {
+  // add animation on scroll using useEffect hook
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
+
   return (
     <section className='main container section'>
       <div className="secTitle">
-        <h3 className="title">
+        <h3 data-aos="fade-right" className="title">
           Most Visited Destinations
         </h3>
       </div>
@@ -19,7 +28,7 @@ const Main = () => {
         {
           destinations.map((destination) => {
             return (
-              <div key={destination.id} className="singleDestination">
+              <div data-aos="fade-up" key={destination.id} className="singleDestination">
                 <div className="imageDiv">
                   <img src={destination.image} alt={destination.destTitle} />
                 </div>
