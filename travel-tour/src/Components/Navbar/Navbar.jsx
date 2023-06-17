@@ -3,18 +3,22 @@ import './navbar.css'
 import { MdOutlineTravelExplore } from 'react-icons/md'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { TbGridDots } from 'react-icons/tb'
+import { Spin as Hamburger, Spin } from 'hamburger-react'
 
 const Navbar = () => {
   const [active, setActive] = useState("navBar") // max-width: 760px navBar will disappear
+  const [isOpen, setOpen] = useState(false) // useState for hamburger menu open and close
 
   // Function for toggle navBar
   const showNavMenuHandler = () => {
     setActive("navBar activeNavBar")
+    setOpen(true)
   }
 
   // Function for close navbar menu
   const hideNavMenuHandler = () => {
     setActive("navBar")
+    setOpen(false)
   }
 
   return (
@@ -67,9 +71,15 @@ const Navbar = () => {
           </div>
         </div>
 
+
+        {/* 
+          Before using Netlify Animated hamburger menu icons library
         <div onClick={showNavMenuHandler} className="toggleNavbar">
           <TbGridDots className='icon' />
-        </div>
+        </div> */}
+
+        {/* Using Netlify Animated hamburger menu icons library */}
+        <Hamburger toggled={isOpen} onToggle={showNavMenuHandler} duration={0.8} className="toggleNavbar" />
 
       </header>
     </section>

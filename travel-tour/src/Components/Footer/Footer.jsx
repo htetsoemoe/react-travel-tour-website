@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div className="footerCard flex">
           <div className="footerIntro flex">
-            <div className="logoDiv">
+            <div data-aos="fade-up" className="logoDiv">
               <a href="#" className="logo flex">
                 <MdTravelExplore className='icon' />
                 <small className="companyName">T&H Travel.</small>
@@ -176,7 +176,7 @@ const Footer = () => {
 
           <div className="footerDiv flex">
             <small>T&H Travel Agency</small>
-            <small>Copyrights Reserved &copy; {thisYear}</small>
+            <small>Copyrights &copy; {thisYear}</small>
           </div>
         </div>
       </div>
