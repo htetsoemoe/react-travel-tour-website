@@ -90,3 +90,20 @@ body {
 
 /* This is a default styles that will apply all the sections. */
 
+/* Media Queries */
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}

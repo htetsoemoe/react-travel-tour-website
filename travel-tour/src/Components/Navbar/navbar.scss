@@ -22,7 +22,7 @@
     width: 100%;
     padding: 1rem;
     z-index: 1000;
-     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
 
     .logo {
         color: var(--blackColor);
@@ -64,7 +64,7 @@
                     padding: 0.5rem 0;
 
                     .navLink {
-                        color: var(--textColor);
+                        color: var(--whiteColor);
                         font-size: 0.9rem;
                         font-weight: 400;
                         &:hover {
@@ -98,6 +98,8 @@
 
         .activeNavBar {
             top: 7rem;
+            background: rgb(51, 37, 37);
+            opacity: 0.9;
         }
     }
 
@@ -110,5 +112,66 @@
         &:hover.icon {
             color: var(--SecondaryColor);
         }
+    }
+}
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 768px) {
+    .toggleNavbar,.closeNavbar {
+        display: none;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+
+        .navBar {
+            .navLists {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+                .navItem {
+                    .navLink {
+                        color: var(--textColor);
+                        padding: 0 0.45rem;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-left: 1rem;
+
+                    a {
+                        color: var(--whiteColor);
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header {
+        .navBar {
+            .navLists {
+                .navItem {
+                    padding: 0 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+       padding: 1rem 8.5rem;
     }
 }

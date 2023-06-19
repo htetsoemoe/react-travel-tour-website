@@ -42,23 +42,23 @@ const Navbar = () => {
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Shop</a>
+              <a href="#" className="navLink">Booking</a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">About</a>
+              <a href="#" className="navLink">Tickets</a>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">Pages</a>
-            </li>
-
-            <li className="navItem">
-              <a href="#" className="navLink">News</a>
+              <a href="#" className="navLink">Blog</a>
             </li>
 
             <li className="navItem">
               <a href="#" className="navLink">Contact</a>
+            </li>
+
+            <li className="navItem">
+              <a href="#" className="navLink">About</a>
             </li>
 
             <button className="btn">
@@ -79,7 +79,10 @@ const Navbar = () => {
         </div> */}
 
         {/* Using Netlify Animated hamburger menu icons library */}
-        <Hamburger toggled={isOpen} onToggle={showNavMenuHandler} duration={0.8} className="toggleNavbar" />
+        <div className="toggleNavbar">
+          <Hamburger toggled={isOpen} onToggle={showNavMenuHandler} duration={0.8} />
+        </div>
+
 
       </header>
     </section>
