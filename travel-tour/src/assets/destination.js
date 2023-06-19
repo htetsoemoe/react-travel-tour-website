@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        image: '../src/assets/img/bora.jpg',
+        image: '/bora.jpg',
         destTitle: 'Bora Bora',
         location: 'New Zealand',
         grade: 'CULTURAL RELAX',
@@ -10,7 +10,7 @@ const data = [
     },
     {
         id: 2,
-        image: '../src/assets/img/santorini.jpg',
+        image: '/santorini.jpg',
         destTitle: 'Santorini',
         location: 'Greece',
         grade: 'CULTURAL RELAX',
@@ -19,7 +19,7 @@ const data = [
     },
     {
         id: 3,
-        image: '../src/assets/img/paris.jpg',
+        image: '/paris.jpg',
         destTitle: 'Eiffel Tower',
         location: 'France',
         grade: 'HONEYMOON',
@@ -28,7 +28,7 @@ const data = [
     },
     {
         id: 4,
-        image: '../src/assets/img/gbf.jpg',
+        image: '/gbf.jpg',
         destTitle: 'Great Barrier Reef',
         location: 'Australia',
         grade: 'ADVENTURE RELAX',
@@ -37,7 +37,7 @@ const data = [
     },
     {
         id: 5,
-        image: '../src/assets/img/float-hotel.jpg',
+        image: '/float-hotel.jpg',
         destTitle: 'River Kwai Jungle Rafts ',
         location: 'Thailand',
         grade: 'HONEYMOON RELAX',
@@ -46,7 +46,7 @@ const data = [
     },
     {
         id: 6,
-        image: '../src/assets/img/golden-bridge.jpg',
+        image: '/golden-bridge.jpg',
         destTitle: 'The Golden Bridge',
         location: 'Vietnam',
         grade: 'HONEYMOON RELAX',
@@ -55,7 +55,7 @@ const data = [
     },
     {
         id: 7,
-        image: '../src/assets/img/java.jpg',
+        image: '/java.jpg',
         destTitle: 'Java Islands',
         location: 'Indonesia',
         grade: 'CULTURE ADVENTURE RELAX',
@@ -64,7 +64,7 @@ const data = [
     },
     {
         id: 8,
-        image: '../src/assets/img/singapore.jpg',
+        image: '/singapore.jpg',
         destTitle: 'Singapore',
         location: 'Singapore',
         grade: 'CULTURE RELAX',
@@ -73,7 +73,7 @@ const data = [
     },
     {
         id: 9,
-        image: '../src/assets/img/taj-mahal.jpg',
+        image: '/taj-mahal.jpg',
         destTitle: 'Taj Mahal',
         location: 'India',
         grade: 'CULTURE RELAX',
